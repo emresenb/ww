@@ -35,6 +35,34 @@ var prefix = ayarlar.prefix;
 const log = message => {
     console.log(`${message}`);
 };
+client.on("ready", async () => {
+  console.log("Bot hazır.");
+  client.user.setPresence({
+    game: {
+      name: "🌟🔥!YILMAZ#9312 Discord Bot Kodluyor🔥🌟 ",
+      type: "STREAMING",
+      url: "https://www.twitch.tv/zulakolsuz"
+    }
+  });
+  setInterval(() => {
+    client.user.setPresence({
+      game: {
+        name: "🌟🔥!YILMAZ#9312 Discord Bot Kodluyor🔥🌟 ",
+        type: "WATCHING"
+      }
+    });
+    console.log("Ayarlandi");
+    setTimeout(() => {
+      client.user.setPresence({
+        game: {
+          name: `❤ ${client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} kullanıcıya hizmet veriyor. ❤`,
+          type: "STREAMING",
+          url: "https://www.twitch.tv/zulakolsuz"
+        }
+      });
+    }, 15000);
+  }, 30000);
+});
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -148,7 +176,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(' ')[0];
 	command = command.slice(prefix.length)
 
-	if (command === 'çal') {
+	if (command === 'play') {
 		const voiceChannel = msg.member.voiceChannel;
 		if (!voiceChannel) return msg.channel.sendEmbed(new Discord.RichEmbed()
       .setColor('RED')
@@ -364,8 +392,9 @@ function play(guild, song) {
 	dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
 
 	 serverQueue.textChannel.sendEmbed(new Discord.RichEmbed()                                   
-  .setTitle("**:microphone: | Müzik Başladı**")
+  .setTitle("**:microphone::flag_tr: :cupid: | Müzik Başladı\n:kiss:Discord:!YILMAZ#9312**")
   .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg`)
+  
   .addField('\nBaşlık', `[${song.title}](${song.url})`, true)
   .addField("\nSes Seviyesi", `${serverQueue.volume}%`, true)
   .addField("Süre", `${song.durationm}:${song.durations}`, true)
