@@ -392,7 +392,7 @@ function play(guild, song) {
 	dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
 
 	 serverQueue.textChannel.sendEmbed(new Discord.RichEmbed()                                   
-  .setTitle("**:microphone::flag_tr: :cupid: | Müzik Başladı\n:kiss:Discord:!YILMAZ#9312**")
+  .setTitle("**:microphone::flag_tr: :cupid: | Müzik Başladı\n:kiss:Discord: !YILMAZ#9312**")
   .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg`)
   
   .addField('\nBaşlık', `[${song.title}](${song.url})`, true)
