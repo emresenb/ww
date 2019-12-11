@@ -403,6 +403,6 @@ function play(guild, song) {
   .addField("Kanal İsmi", `${song.best}`, true)
   .addField("Video Linki", `${song.url}`, true)                              
   //.setImage(`https://i.ytimg.com/vi/${song.id}/hqdefault.jpg`)
-    .setImage(`https://cdn.discordapp.com/attachments/645797096842199051/654296087913299986/sssssssss.gif`)                                 
+    .setImage(`https://cdn.discordapp.com/attachments/645797096842199051/654298558878449685/f.png`)                                 
   .setColor('RED'));
 }
