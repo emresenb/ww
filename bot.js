@@ -64,6 +64,37 @@ client.on("ready", async () => {
   }, 30000);
 });
 
+
+
+// oda sımge degıstır baslangıc
+
+function cpanel1() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      client.channels.get("645763669787148311").setName("📜『chat-j4j』");
+      cpanel2();
+    }, 5000);
+  });
+}
+
+function cpanel2() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      client.channels.get("645763669787148311").setName("🌌『SohbeT-j4j』");
+      cpanel1();
+    }, 5000);
+  });
+}
+
+client.on("ready", async message => {
+  cpanel1();
+});
+
+
+
+
+
+
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
