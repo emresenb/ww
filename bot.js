@@ -66,35 +66,6 @@ client.on("ready", async () => {
 
 
 
-// oda sımge degıstır baslangıc
-
-function cpanel1() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      client.channels.get("654952019559448602").setName("📜『chat』");
-      cpanel2();
-    }, 5000);
-  });
-}
-
-function cpanel2() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      client.channels.get("654952019559448602").setName("🌌『SohbeT』");
-      cpanel1();
-    }, 5000);
-  });
-}
-
-client.on("ready", async message => {
-  cpanel1();
-});
-
-
-
-
-
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
