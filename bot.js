@@ -71,7 +71,7 @@ client.on("ready", async () => {
 function cpanel1() {
   return new Promise(resolve => {
     setTimeout(() => {
-      client.channels.get("645763669787148311").setName("📜『chat-j4j』");
+      client.channels.get("654952019559448602").setName("📜『chat』");
       cpanel2();
     }, 5000);
   });
@@ -80,7 +80,7 @@ function cpanel1() {
 function cpanel2() {
   return new Promise(resolve => {
     setTimeout(() => {
-      client.channels.get("645763669787148311").setName("🌌『SohbeT-j4j』");
+      client.channels.get("654952019559448602").setName("🌌『SohbeT』");
       cpanel1();
     }, 5000);
   });
@@ -423,7 +423,7 @@ function play(guild, song) {
 	dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
 
 	 serverQueue.textChannel.sendEmbed(new Discord.RichEmbed()                                   
-  .setTitle("**:microphone::flag_tr: :cupid: | Müzik Başladı\n:kiss:Discord: !YILMAZ#9312**")
+  .setTitle("**:microphone::flag_tr: :cupid: | Müzik Başladı\n:kiss:Discord: ☪YILMAZ#4468**")
   .setThumbnail(`https://i.ytimg.com/vi/${song.id}/default.jpg`)
   
   .addField('\nBaşlık', `[${song.title}](${song.url})`, true)
