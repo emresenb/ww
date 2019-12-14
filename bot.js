@@ -209,7 +209,7 @@ client.on('message', async msg => {
 				var video = await youtube.getVideo(url);
 			} catch (error) {
 				try {
-					var videos = await youtube.searchVideos(searchString, 10);
+					var videos = await youtube.searchVideos(searchString, 5);
 					let index = 0;
           
 				 msg.channel.sendEmbed(new Discord.RichEmbed()                  
@@ -217,7 +217,7 @@ client.on('message', async msg => {
          .setAuthor(`${msg.author.tag}`, msg.author.avatarURL)
          .setThumbnail("https://i.postimg.cc/W1b1LW13/youtube-kids-new-logo.png")
          .setDescription(`${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}`)
-         .setFooter('Lütfen 1-10 arasında bir rakam seçiniz 10 saniye içinde liste iptal edilecektir.')
+         .setFooter('Lütfen 1-5 arasında bir rakam seçiniz 10 saniye içinde liste iptal edilecektir.')
          .setColor('RED'));
           msg.delete(5000)
          
