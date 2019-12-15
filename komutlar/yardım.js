@@ -13,8 +13,6 @@ exports.run = async (client, message, params) => {
 ✅${prefix}çal      ➠  Belirtilen müziği oynatmayı sağlar.            
 ✅${prefix}durdur   ➠  Belirtilen müziği durdurmayı sağlar.           
 ✅${prefix}geç      ➠  Sıradaki müziğe geçiş yapar.                   
-✅${prefix}kuyruk   ➠  Sıradaki müzikleri gösteririr.                 
-✅${prefix}ses      ➠  Sesi belirtilen miktar kadar arttırır/azaltır. 
 ✅${prefix}duraklat ➠  Müziği durkaklatır.                            
 ✅${prefix}devam    ➠  Müziği devam ettirir.                          
 ​
