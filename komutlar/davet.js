@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     const embed = new Discord.RichEmbed()
         
         .setTitle(`${client.user.username} DAVET SİSTEMİ `)
-        .setDescription(`📥**Botun Davet Linki İçin** [TIKLA](https://discordapp.com/oauth2/authorize?client_id=602024501710159882&scope=bot&permissions=8) \n🔶**Destek Sunucusu İçin** [TIKLA](https://discord.gg/vW4wnRH)`)
+        .setDescription(`📥**Botun Davet Linki İçin** [TIKLA](https://discordapp.com/oauth2/authorize?client_id=655768847303049216&scope=bot&permissions=8) \n🔶**Destek Sunucusu İçin** [TIKLA](https://discord.gg/pYdEvNf)`)
         .setThumbnail(client.user.avatarURL)
         .setFooter(`${message.author.username} Başarıyla ${ayarlar.prefix}davet Sistemi Kullandı!`, message.author.avatarURL)
     .setColor(`RANDOM`)
