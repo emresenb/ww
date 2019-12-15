@@ -14,7 +14,6 @@ console.log(`BOT: Şu an ` + client.channels.size + ` adet kanala, ` + client.gu
         "m!yardım", 
         "m!çal", 
         "m!radyo"
-
   ];
 
     setInterval(function() {

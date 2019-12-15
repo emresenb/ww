@@ -17,7 +17,7 @@ exports.run = async (client, message, params) => {
 ✅${prefix}duraklat ➠  Müziği durkaklatır.                            
 ✅${prefix}devam    ➠  Müziği devam ettirir.                          
 ​
-# Komutlar hakkında yardım almak icin ${prefix}yardım <komut ismi>`);
+>`);
   } else {
     let command = params[0];
     if (client.commands.has(command)) {

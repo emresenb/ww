@@ -149,7 +149,7 @@ client.on("message", async msg => {
   const serverQueue = queue.get(msg.guild.id);
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
-  if (msg.content.startsWith("m!play")) {
+  if (msg.content.startsWith("m!çal")) {
     console.log("mesaj çalışıyor");
     let mesaj2 =
       "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"; // hata neden var onu bulmak için yapıyorum
