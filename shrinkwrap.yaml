@@ -11,7 +11,7 @@ dependencies:
   figlet: 1.2.4
   fs: 0.0.2
   hastebin-gen: 2.0.5
-  inquirer: 7.0.0
+  inquirer: 7.0.1
   jimp: 0.9.3
   math-expression-evaluator: 1.2.17
   moment: 2.24.0
@@ -2197,7 +2197,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
-  /inquirer/7.0.0:
+  /inquirer/7.0.1:
     dependencies:
       ansi-escapes: 4.3.0
       chalk: 2.4.2
@@ -2216,7 +2216,7 @@ packages:
     engines:
       node: '>=6.0.0'
     resolution:
-      integrity: sha512-rSdC7zelHdRQFkWnhsMu2+2SO41mpv2oF2zy4tMhmiLWkcKbOAs87fWAJhVXttKVwhdZvymvnuM95EyEXg2/tQ==
+      integrity: sha512-V1FFQ3TIO15det8PijPLFR9M9baSlnRs9nL7zWu1MNVA2T9YVl9ZbrHJhYs7e9X8jeMZ3lr2JH/rdHFgNCBdYw==
   /integer/1.0.7:
     dependencies:
       bindings: 1.5.0
@@ -4468,7 +4468,7 @@ specifiers:
   figlet: ^1.2.4
   fs: ^0.0.2
   hastebin-gen: ^2.0.5
-  inquirer: ^7.0.0
+  inquirer: ^7.0.1
   jimp: ^0.9.1
   math-expression-evaluator: ^1.2.17
   moment: ^2.24.0
