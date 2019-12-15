@@ -9,6 +9,7 @@ exports.run = async (client, message, params) => {
     message.channel.sendCode("asciidoc",`🎧 = Yardım Menüsü = 🎧
                     
 ​
+✅${prefix}radyo    ➠  Radyoyu Açmanızı Sağlar.
 ✅${prefix}çal      ➠  Belirtilen müziği oynatmayı sağlar.            
 ✅${prefix}durdur   ➠  Belirtilen müziği durdurmayı sağlar.           
 ✅${prefix}geç      ➠  Sıradaki müziğe geçiş yapar.                   

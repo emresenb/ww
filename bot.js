@@ -468,7 +468,7 @@ function play(guild, song) {
       .setColor("RANDOM")
       .setColor("RANDOM")
       .setTitle(
-        "**🎙 :ok_hand: :orange_heart:  :gem: Şarkı Başladı :gem: :orange_heart:  :ok_hand:  **"
+        "** :gem: Şarkı Başladı :gem:   **"
       )
       .setThumbnail(
         `https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`
@@ -478,7 +478,7 @@ function play(guild, song) {
       )
 
       .addField(
-        ":flag_tr: :cupid: :kiss: Discord : [MB] Asreaper ✭#4920\n\n",
+        " Discord : [MB] Asreaper ✭#4920\n\n",
         `[${song.title}](${song.url})`,
         true
       )
