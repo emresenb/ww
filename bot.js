@@ -163,7 +163,7 @@ client.on("message", async msg => {
     console.log(mesaj2); 
     if (!voiceChannel) return msg.channel.sendEmbed(send);
 
-    if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/)) {
+    if (url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlis(.*)$/)) {
       const playlist = await youtube.getPlaylist(url);
       const videos = await playlist.getVideos();
       for (const video of Object.values(videos)) {
@@ -282,7 +282,7 @@ client.on("message", async msg => {
             )
         );
 
-    if (!serverQueue)
+    
       return msg.channel.sendEmbed(
         new Discord.RichEmbed()
           .setColor("RANDOM")
@@ -294,14 +294,7 @@ client.on("message", async msg => {
     if (args[1] > 200)
       return msg.reply("**Ses seviyesi 200'den fazla olamaz.**");
 
-    if (!args[1])
-      return msg.channel.sendEmbed(
-        new Discord.RichEmbed()
-          .setTitle(
-            `:loud_sound: Şuanki Ses Seviyesi: **${serverQueue.volume}**`
-          )
-          .setColor("RANDOM")
-      );
+    
 
     serverQueue.volume = args[1];
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
@@ -332,7 +325,7 @@ client.on("message", async msg => {
           true
         )
     );
-  } else if (msg.content.startsWith === prefix + "queue") {
+  } else if (msg.content.startsWith === prefix + "list") {
     let index = 0;
     if (!serverQueue)
       return msg.channel.sendEmbed(
