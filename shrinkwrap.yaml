@@ -1,5 +1,5 @@
 dependencies:
-  ascii-art: 2.4.0
+  ascii-art: 2.5.0
   canvas: 2.6.1
   cleverbot-node: 0.3.11
   cleverbot.io: 1.0.4
@@ -16,8 +16,8 @@ dependencies:
   math-expression-evaluator: 1.2.17
   moment: 2.24.0
   moment-duration-format: 2.2.2
-  mongodb: 3.4.0
-  mongoose: 5.8.0
+  mongodb: 3.4.1
+  mongoose: 5.8.3
   ms: 2.1.2
   mysql: 2.17.1
   node-google-translate-skidz: 1.1.2
@@ -31,12 +31,12 @@ dependencies:
   snekfetch: 4.0.4
   speedtest-net: 1.6.0
   steam-provider: 0.2.0
-  superagent: 5.1.2
+  superagent: 5.1.3
   tcmb-doviz: 1.0.5
   tcmb-doviz-kuru: 2.0.4
   useful-tools: 0.2.6
   weather-js: 2.0.0
-  ytdl-core: 1.0.3
+  ytdl-core: 1.0.5
 packages:
   /@babel/runtime/7.7.6:
     dependencies:
@@ -547,59 +547,63 @@ packages:
     dev: false
     resolution:
       integrity: sha512-wGUIVQXuehL5TCqQun8OW81jGzAWycqzFF8lFp+GOM5BXLYj3bKNsYC4daB7n6XjCqxQA/qgTJ+8ANR3acjrog==
-  /ascii-art-ansi/1.2.0:
+  /ascii-art-ansi/1.3.3:
     dependencies:
       color-difference: 0.3.4
       maplex: 0.0.2
     dev: false
     resolution:
-      integrity: sha512-K2TSfESX77gUmsfP3crqjEcZ7vrNgcLTP+vSQp0q/KoAZ/UbpGXUfys81luNruC9/fl0ykrKJLb5orWKLlF5lQ==
+      integrity: sha512-51ApPNrzzeb95GzyjnT1djktdthkxZLoeSENsh+bRzCsjEK3OkIqJ5B5IbxzeSIkNPXySBUlz+9qrOIDWbnOEg==
   /ascii-art-braille/0.0.2:
     dev: false
     resolution:
       integrity: sha512-o/7mG8eKS641MhAnl8Eg2MEVs62+PPGFUyEQ3CW+SCnrFJH+V6ouTM88rpKZJo+lsNSlPtDZcsUOEw+nnVW2pQ==
+  /ascii-art-braille/0.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-PpouE0W7JwW2ybzBTz5t3AaglRHvzC4nDpmI9Zri3fbfDegKRRtZBwRVdsLPf6ij0ACa3Yqq06E4D/EDi8RF5w==
   /ascii-art-font/1.0.2:
     dev: false
     resolution:
       integrity: sha512-0hMSwoO1qk8u8IkFMxycqZxwi3SgzRzGQzqzv8RGaMmst4fVgerUTobEiJHZIRcLLrUvKa2DHMWqWKMTJG3QsQ==
   /ascii-art-graph/0.1.1:
     dependencies:
-      ascii-art-ansi: 1.2.0
+      ascii-art-ansi: 1.3.3
       ascii-art-braille: 0.0.2
       d3: 5.14.2
       json2csv: 4.5.4
     dev: false
     resolution:
       integrity: sha512-ubtM8Egj/AIAUFcoCTXzwq3ZbHkJEzugqY/bZmu1efPYR752CPcRYSnPzdUxL2b2vkEok8xFAayrHCgfr9Rocw==
-  /ascii-art-image/1.2.0/ascii-art-ansi@1.2.0:
+  /ascii-art-image/1.2.2/ascii-art-ansi@1.3.3:
     dependencies:
-      ascii-art-ansi: 1.2.0
-      ascii-art-braille: 0.0.2
-      canvas: 2.6.0
+      ascii-art-ansi: 1.3.3
+      ascii-art-braille: 0.1.0
+      canvas: 2.6.1
     dev: false
-    id: registry.npmjs.org/ascii-art-image/1.2.0
+    id: registry.npmjs.org/ascii-art-image/1.2.2
     peerDependencies:
-      ascii-art-ansi: ^1.2.0
+      ascii-art-ansi: ^1.3.3
     resolution:
-      integrity: sha512-ETPWNDI/YC8EII2EoLMsKYB30iNvKeBxqbIj0DlcDDpI7MWcACfz5/Hd46AAQBSlj2ere9J5F9tLEShysZcViQ==
+      integrity: sha512-4z7lkgpRrobwsKiSXUtg0tdYPzQ4Y515OuSBvnIbky8xbftSmEh6pFPe6m9Kv1HBkBmfHZXUIuvNOgsXONJlbQ==
   /ascii-art-table/1.0.1:
     dependencies:
-      ascii-art-ansi: 1.2.0
+      ascii-art-ansi: 1.3.3
     dev: false
     resolution:
       integrity: sha512-6sAn6nDppj/bUjgW5p7t6tAtx2RV+8DJzso626dLeVLUR43DTCwZUuQ8PiDEWggnYnqt2VUoT2rtTK6vc3MIzg==
   /ascii-art-utf/0.0.1:
     dependencies:
-      ascii-art-ansi: 1.2.0
+      ascii-art-ansi: 1.3.3
     dev: false
     resolution:
       integrity: sha512-jpD2A7STc5THKfEV5A/CMNEanoMC5IBZ8D3oVIR2rCt/pj4tFZsLiAf4e7mcRLs1UaovN3d6kDQCEythMcxchg==
-  /ascii-art/2.4.0:
+  /ascii-art/2.5.0:
     dependencies:
-      ascii-art-ansi: 1.2.0
+      ascii-art-ansi: 1.3.3
       ascii-art-font: 1.0.2
       ascii-art-graph: 0.1.1
-      ascii-art-image: /ascii-art-image/1.2.0/ascii-art-ansi@1.2.0
+      ascii-art-image: /ascii-art-image/1.2.2/ascii-art-ansi@1.3.3
       ascii-art-table: 1.0.1
       ascii-art-utf: 0.0.1
       browser-request: 0.3.3
@@ -610,10 +614,10 @@ packages:
     dev: false
     hasBin: true
     optionalDependencies:
-      canvas: 2.6.0
+      canvas: 2.6.1
       jsftp: 2.1.3
     resolution:
-      integrity: sha512-jju5gDpGILOSgfnCPJgKrIzw5gPeTyEEjientzVqI3TH7uV0EfImdupYHz87+ySve0PWky8xVTzKqA2aRFBcmg==
+      integrity: sha512-3j2dCW/7SAbj1rIh5KWXjUm3Z0ftlmMzJqivITOyYLBsob4IbcAR0pzwhoiALGksEEsxVvF2dNrLmPuGeb4zXg==
   /asn1/0.2.4:
     dependencies:
       safer-buffer: 2.1.2
@@ -844,17 +848,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
-  /canvas/2.6.0:
-    dependencies:
-      nan: 2.14.0
-      node-pre-gyp: 0.11.0
-      simple-get: 3.1.0
-    dev: false
-    engines:
-      node: '>=6'
-    requiresBuild: true
-    resolution:
-      integrity: sha512-bEO9f1ThmbknLPxCa8Es7obPlN9W3stB1bo7njlhOFKIdUTldeTqXCh9YclCPAi2pSQs84XA0jq/QEZXSzgyMw==
   /canvas/2.6.1:
     dependencies:
       nan: 2.14.0
@@ -2525,7 +2518,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
-  /m3u8stream/0.6.3:
+  /m3u8stream/0.6.4:
     dependencies:
       miniget: 1.6.1
       sax: 1.2.4
@@ -2533,7 +2526,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-HNUco8ef9kOvMRH7tYxJqbk9IuRA+AuZG8a/dQwqI+jfuEs1/DUaPbfTIlUDB4JmTZNkTOZHvZI5TvnQGR8nKA==
+      integrity: sha512-9WLF1VAtbVij03HWJKbVZ8L0orsoZiP53UljR5EwaDrozQFMsTGRDPe3PbzWV73He8a+j5H/hWZNoI2VkUSsiw==
   /maplex/0.0.2:
     dependencies:
       async: 2.6.3
@@ -2684,7 +2677,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-  /mongodb/3.3.5:
+  /mongodb/3.4.1:
     dependencies:
       bson: 1.1.3
       require_optional: 1.0.1
@@ -2695,30 +2688,18 @@ packages:
     optionalDependencies:
       saslprep: 1.0.3
     resolution:
-      integrity: sha512-6NAv5gTFdwRyVfCz+O+KDszvjpyxmZw+VlmqmqKR2GmpkeKrKFRv/ZslgTtZba2dc9JYixIf99T5Gih7TIWv7Q==
-  /mongodb/3.4.0:
-    dependencies:
-      bson: 1.1.3
-      require_optional: 1.0.1
-      safe-buffer: 5.2.0
-    dev: false
-    engines:
-      node: '>=4'
-    optionalDependencies:
-      saslprep: 1.0.3
-    resolution:
-      integrity: sha512-W90jm/n8F0Edm47ljkVRK9l8qGW9g8T9ZSiZWRiUP58wLhsCJCeN/JxdpVnH0CUwwAw2hITUcCo9x58udpX2Uw==
+      integrity: sha512-juqt5/Z42J4DcE7tG7UdVaTKmUC6zinF4yioPfpeOSNBieWSK6qCY+0tfGQcHLKrauWPDdMZVROHJOa8q2pWsA==
   /mongoose-legacy-pluralize/1.0.2:
     dev: false
     peerDependencies:
       mongoose: '*'
     resolution:
       integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
-  /mongoose/5.8.0:
+  /mongoose/5.8.3:
     dependencies:
       bson: 1.1.3
       kareem: 2.3.1
-      mongodb: 3.3.5
+      mongodb: 3.4.1
       mongoose-legacy-pluralize: 1.0.2
       mpath: 0.6.0
       mquery: 3.2.2
@@ -2731,7 +2712,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-+VqrLGmHoDW/72yaXgiXSF7E/JcZ8Iyt7etrd4x3+Bj0z7k6GHHUBgGHP5ySPoG4J412RFuvHqx6xEOIuUrcfQ==
+      integrity: sha512-WnO4WJ8eZ5Hgwp11Gl2dOxkWYJe8xV7oCqDV3ZbTA7j2q1prc0lPWAd9ZK5R6OhQlp55CleEZXqXUPrZnjSEDQ==
   /mpath/0.6.0:
     dev: false
     engines:
@@ -4019,7 +4000,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /superagent/5.1.2:
+  /superagent/5.1.3:
     dependencies:
       component-emitter: 1.3.0
       cookiejar: 2.1.2
@@ -4036,7 +4017,7 @@ packages:
     engines:
       node: '>= 7.0.0'
     resolution:
-      integrity: sha512-VwPCbi9H02qDtTbdY+e3+cK5XR0YHsJy9hmeCOXLQ8ezjq8+S1Bs4MdNRmpmf2QjDBetD7drG7/nEta7E3E6Sg==
+      integrity: sha512-2bno1Nb4uvZPECTJ7NDYlae6Q8LLQoZZZ9Vumd346jU1UGVkNC/lQI42jHwtrqVoepyt0QxNKFty01IRKgD4CA==
   /supports-color/5.5.0:
     dependencies:
       has-flag: 3.0.0
@@ -4441,22 +4422,22 @@ packages:
     dev: false
     resolution:
       integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=
-  /ytdl-core/1.0.3:
+  /ytdl-core/1.0.5:
     dependencies:
       html-entities: 1.2.1
-      m3u8stream: 0.6.3
+      m3u8stream: 0.6.4
       miniget: 1.6.1
       sax: 1.2.4
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-sBOVokjrAigKTEn248MJ+JpS5ifay/vBzYGMDeZhG61xmgthev6yHXBgEgm+M8ySDQXXVjOTmUtY3GHbX988KA==
+      integrity: sha512-IAmBgsGz61RKsIHKls3qDNHOXPUGAEjMI7EXOYECtdkSRTsgPEbJ1MwSLk+3L5SAExcHrHKoql4uXFu3Bhw3gg==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  ascii-art: ^2.3.1
+  ascii-art: ^2.5.0
   canvas: ^2.6.1
   cleverbot-node: ^0.3.11
   cleverbot.io: ^1.0.4
@@ -4473,8 +4454,8 @@ specifiers:
   math-expression-evaluator: ^1.2.17
   moment: ^2.24.0
   moment-duration-format: ^2.2.2
-  mongodb: ^3.4.0
-  mongoose: ^5.8.0
+  mongodb: ^3.4.1
+  mongoose: ^5.8.3
   ms: ^2.1.2
   mysql: ^2.17.1
   node-google-translate-skidz: ^1.1.2
@@ -4488,9 +4469,9 @@ specifiers:
   snekfetch: ^4.0.4
   speedtest-net: ^1.6.0
   steam-provider: ^0.2.0
-  superagent: ^5.1.2
+  superagent: ^5.1.3
   tcmb-doviz: ^1.0.5
   tcmb-doviz-kuru: ^2.0.4
   useful-tools: ^0.2.6
   weather-js: ^2.0.0
-  ytdl-core: ^1.0.3
+  ytdl-core: ^1.0.4
