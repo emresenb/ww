@@ -149,7 +149,7 @@ client.on("message", async msg => {
   const serverQueue = queue.get(msg.guild.id);
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
-  if (msg.content.startsWith("m!çal")) {
+  if (msg.content.startsWith("cr!çal")) {
     console.log("mesaj çalışıyor");
     let mesaj2 =
       "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"; // hata neden var onu bulmak için yapıyorum
@@ -258,7 +258,7 @@ client.on("message", async msg => {
       );
     serverQueue.connection.dispatcher.end("**Sıradaki Şarkıya Geçildi!**");
     return undefined;
-  } else if (command === "dur") {
+  } else if (command === "kapat") {
     if (!serverQueue || !serverQueue.playing)
       return msg.channel.send("**Şuanda zaten bir şarkı oynatılmıyor.");
 
@@ -271,7 +271,7 @@ client.on("message", async msg => {
           .setColor("RANDOM")
       );
     }
-  } else if (command === "volume") {
+  } else if (command === "ses") {
     if (!msg.member.voiceChannel)
       if (!msg.member.voiceChannel)
         return msg.channel.sendEmbed(
@@ -461,7 +461,7 @@ function play(guild, song) {
       .setColor("RANDOM")
       .setColor("RANDOM")
       .setTitle(
-        "** :gem: Şarkı Başladı :gem:   **"
+        "**Şarkı Başladı**"
       )
       .setThumbnail(
         `https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`
@@ -469,22 +469,6 @@ function play(guild, song) {
       .setImage(
         "https://cdn.discordapp.com/attachments/645797096842199051/649361326992523274/efekt.gif"
       )
-
-      .addField(
-        " Discord : [MB] Asreaper ✭#4920\n\n",
-        `[${song.title}](${song.url})`,
-        true
-      )
-      .setColor(0xdf01a5)
-
-      .addField("Destek Sunucusu!", `[Tıkla!](https://discord.gg/pYdEvNf)`)
-
-      .addField(
-        "Bot Davet Et!",
-        `[Tıkla!](https://discordapp.com/oauth2/authorize?client_id=655768847303049216&scope=bot&permissions=8)`,
-        true
-      )
-      .addField("\nSes Seviyesi", `${serverQueue.volume}%`, true)
 
       .addField("Süre", `${song.durationm}:${song.durations}`, true)
       .setColor("RANDOM")

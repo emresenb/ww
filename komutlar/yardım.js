@@ -1,44 +1,37 @@
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
 
-exports.run = async (client, message, params) => {
+let botid = ('672381245115727911') //bu yere botun id'sini yapıştırın.
+//eğer botunuz dbl(discord bot list) de yoksa Bota Oy Ver (Vote) olmucaktır.
+
+exports.run = (client, message, args) => {
+    const embed = new Discord.RichEmbed()
+        .setAuthor(`${client.user.username} `, client.user.avatarURL)
+        .setColor('0x36393E')
+        .setTitle(`${client.user.username} - Müzik-Komutlar`)
+        .setDescription(`:small_orange_diamond:cr!radyo ➠ Radyoyu Açmanızı Sağlar.
+:small_blue_diamond:cr!çal ➠ Belirtilen müziği oynatmayı sağlar.
+:small_orange_diamond:cr!kapat ➠ Belirtilen müziği kapatmayı sağlar sağlar. 
+:small_blue_diamond:cr!geç ➠ Sıradaki müziğe geçiş yapar.
+:small_orange_diamond:cr!duraklat ➠ Müziği durkaklatır.
+:small_blue_diamond:cr!devam ➠ Müziği devam ettirir.` )  
+        .setThumbnail(client.user.avatarURL)
+        .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
+        .setImage("")  
+    return message.channel.sendEmbed(embed);
   
-  let prefix = ayarlar.prefix
- 
-  if (!params[0]) {
-    message.channel.sendCode("asciidoc",`🎧 = Yardım Menüsü = 🎧
-                    
-​
-✅${prefix}radyo    ➠  Radyoyu Açmanızı Sağlar.
-✅${prefix}çal      ➠  Belirtilen müziği oynatmayı sağlar.            
-✅${prefix}durdur   ➠  Belirtilen müziği durdurmayı sağlar.           
-✅${prefix}geç      ➠  Sıradaki müziğe geçiş yapar.                   
-✅${prefix}duraklat ➠  Müziği durkaklatır.                            
-✅${prefix}devam    ➠  Müziği devam ettirir.                          
-​
->`);
-  } else {
-    let command = params[0];
-    if (client.commands.has(command)) {
-      command = client.commands.get(command);
-      message.channel.sendCode('asciidoc', `= ${command.help.name} =
-​
-Hakkında  :: ${command.help.description}
-Kullanım  :: ${prefix}${command.help.usage}`);
-    }
-  }
   
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
-  permLevel: 0
+  aliases: [''],
+  permLevel: 0,
 };
 
 exports.help = {
-  name: 'yardım',
-  description: 'Botun yardım komutlarını gösterir.',
-  usage: 'yardım'
+  name: 'müzik',
+  description: '',
+  usage: ''
 };
