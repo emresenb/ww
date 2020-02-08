@@ -14,7 +14,7 @@ exports.run = function(bot, message, args) {
     if (!message.member.voiceChannel) return message.reply("**:bangbang: Sana bağlanmam için ilk önce sesli bir kanala katılmalısın. :bangbang:**").then(m => m.delete(15000)).catch(console.error);
     else {
         if (!args[0] || args[0] === "help" || args[0] === "yardım") {
-            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵 \n \n 1 = Fenomen \n 2 = FenomenTürkc \n \n Açmak İçin cr!radyo <numara> \n Kapatmak İçin cr!radyo kapat**").then(m => m.delete(40000)).catch(console.error);
+            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵 \n \n 1 = Fenomen \n 2 = FenomenTürk \n \n Açmak İçin cr!radyo <numara> \n Kapatmak İçin cr!radyo kapat**").then(m => m.delete(40000)).catch(console.error);
         } else if (args[0].toLowerCase() === "fenomen" || args[0] === "1") {
             message.member.voiceChannel.join().then(connection => {
                 var dispatcher = connection.playStream(radyo.fenomen);
