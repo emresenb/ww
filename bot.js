@@ -270,39 +270,7 @@ client.on("message", async msg => {
           .setTitle("**Şarkı Durduruldu!**")
           .setColor("RANDOM")
       );
-    }
-  } else if (command === "ses") {
-    if (!msg.member.voiceChannel)
-      if (!msg.member.voiceChannel)
-        return msg.channel.sendEmbed(
-          new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setDescription(
-              "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"
-            )
-        );
-
-    
-      return msg.channel.sendEmbed(
-        new Discord.RichEmbed()
-          .setColor("RANDOM")
-          .setTitle(
-            "**Herhangi bir şarkı oynatılmadığı için sesini ayarlayamam!**"
-          )
-      );
-
-    if (args[1] > 200)
-      return msg.reply("**Ses seviyesi 200'den fazla olamaz.**");
-
-    
-
-    serverQueue.volume = args[1];
-    serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
-    return msg.channel.sendEmbed(
-      new Discord.RichEmbed()
-        .setTitle(`:loud_sound: Ses Seviyesi Ayarlanıyor: **${args[1]}**`)
-        .setColor("RANDOM")
-    );
+      
   } else if (command === "çalan") {
     if (!serverQueue)
       return msg.channel.sendEmbed(
