@@ -345,7 +345,6 @@ client.on("message", async msg => {
   }
 
   return undefined;
-});
 
 async function handleVideo(video, msg, voiceChannel, playlist = false) {
   const serverQueue = queue.get(msg.guild.id);
