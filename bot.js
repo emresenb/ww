@@ -149,7 +149,7 @@ client.on("message", async msg => {
   const serverQueue = queue.get(msg.guild.id);
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
-  if (msg.content.startsWith("cr!çal")) {
+  if (msg.content.startsWith("m!çal")) {
     console.log("mesaj çalışıyor");
     let mesaj2 =
       "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"; // hata neden var onu bulmak için yapıyorum
@@ -267,10 +267,18 @@ client.on("message", async msg => {
       serverQueue.connection.dispatcher.pause();
       return msg.channel.sendEmbed(
         new Discord.RichEmbed()
-          .setTitle("**Şarkı Durduruldu!**")
+          .setTitle("**Şarkı Kapatıldı**")
           .setColor("RANDOM")
       );
-      
+    }
+    
+    serverQueue.volume = args[1];
+    serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
+    return msg.channel.sendEmbed(
+      new Discord.RichEmbed()
+        .setTitle(`:loud_sound: Ses Seviyesi Ayarlanıyor: **${args[1]}**`)
+        .setColor("RANDOM")
+    );
   } else if (command === "çalan") {
     if (!serverQueue)
       return msg.channel.sendEmbed(
@@ -345,6 +353,7 @@ client.on("message", async msg => {
   }
 
   return undefined;
+});
 
 async function handleVideo(video, msg, voiceChannel, playlist = false) {
   const serverQueue = queue.get(msg.guild.id);
