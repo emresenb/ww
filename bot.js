@@ -258,7 +258,7 @@ client.on("message", async msg => {
       );
     serverQueue.connection.dispatcher.end("**Sıradaki Şarkıya Geçildi!**");
     return undefined;
-  } else if (command === "dur") {
+  } else if (command === "kapat") {
     if (!serverQueue || !serverQueue.playing)
       return msg.channel.send("**Şuanda zaten bir şarkı oynatılmıyor.");
 
@@ -267,11 +267,11 @@ client.on("message", async msg => {
       serverQueue.connection.dispatcher.pause();
       return msg.channel.sendEmbed(
         new Discord.RichEmbed()
-          .setTitle("**Şarkı Durduruldu!**")
+          .setTitle("**Şarkı Kapatıldı!**")
           .setColor("RANDOM")
       );
     }
-  } else if (command === "volume") {
+  } else if (command === "9863dy3123213123123123fdaqweqweqweqwdasqweasd13d4312 asd12312ee edad3123ewe12") {
     if (!msg.member.voiceChannel)
       if (!msg.member.voiceChannel)
         return msg.channel.sendEmbed(
