@@ -149,7 +149,7 @@ client.on("message", async msg => {
   const serverQueue = queue.get(msg.guild.id);
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
-  if (msg.content.startsWith("m!çal")) {
+  if (msg.content.startsWith("cr!çal")) {
     console.log("mesaj çalışıyor");
     let mesaj2 =
       "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"; // hata neden var onu bulmak için yapıyorum
@@ -258,7 +258,7 @@ client.on("message", async msg => {
       );
     serverQueue.connection.dispatcher.end("**Sıradaki Şarkıya Geçildi!**");
     return undefined;
-  } else if (command === "kapat") {
+  } else if (command === "dur") {
     if (!serverQueue || !serverQueue.playing)
       return msg.channel.send("**Şuanda zaten bir şarkı oynatılmıyor.");
 
@@ -267,11 +267,35 @@ client.on("message", async msg => {
       serverQueue.connection.dispatcher.pause();
       return msg.channel.sendEmbed(
         new Discord.RichEmbed()
-          .setTitle("**Şarkı Kapatıldı**")
+          .setTitle("**Şarkı Durduruldu!**")
           .setColor("RANDOM")
       );
     }
+  } else if (command === "volume") {
+    if (!msg.member.voiceChannel)
+      if (!msg.member.voiceChannel)
+        return msg.channel.sendEmbed(
+          new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setDescription(
+              "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"
+            )
+        );
+
     
+      return msg.channel.sendEmbed(
+        new Discord.RichEmbed()
+          .setColor("RANDOM")
+          .setTitle(
+            "**Herhangi bir şarkı oynatılmadığı için sesini ayarlayamam!**"
+          )
+      );
+
+    if (args[1] > 200)
+      return msg.reply("**Ses seviyesi 200'den fazla olamaz.**");
+
+    
+
     serverQueue.volume = args[1];
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
     return msg.channel.sendEmbed(
