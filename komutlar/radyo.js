@@ -6,6 +6,7 @@ const radyo = {
     fenomen : "http://fenomen.listenfenomen.com/fenomen/128/icecast.audio ",
     fenomenfm : "https://fenomenturk.listenfenomen.com/fenomenturk/128/icecast.audio ",
     kralpop : "https://www.kralmuzik.com.tr/radyo/kral-pop ",
+    vergın : "https://playerservices.streamtheworld.com/api/livestream-redirect/VIRGIN_RADIOAAC.aac?dist=onlineradiobox ",
 
 }
 
@@ -15,7 +16,7 @@ exports.run = function(bot, message, args) {
     if (!message.member.voiceChannel) return message.reply("**:bangbang: Sana bağlanmam için ilk önce sesli bir kanala katılmalısın. :bangbang:**").then(m => m.delete(15000)).catch(console.error);
     else {
         if (!args[0] || args[0] === "help" || args[0] === "yardım") {
-            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵 \n \n 1 = Fenomen \n 2 = FenomenTürk \n 3 = KralPop \n \n Açmak İçin cr!radyo <numara> \n Kapatmak İçin cr!radyo kapat**").then(m => m.delete(40000)).catch(console.error);
+            message.reply("**\n \n  🎵 Radyo İstasyonları 🎵 \n \n 1 = Fenomen \n 2 = FenomenTürk \n 3 = KralPop \n 4 = Virgin Radio\n \n Açmak İçin cr!radyo <numara> \n Kapatmak İçin cr!radyo kapat**").then(m => m.delete(40000)).catch(console.error);
         } else if (args[0].toLowerCase() === "fenomen" || args[0] === "1") {
             message.member.voiceChannel.join().then(connection => {
                 var dispatcher = connection.playStream(radyo.fenomen);
@@ -33,9 +34,14 @@ exports.run = function(bot, message, args) {
         
             } else if (args[0].toLowerCase() === "KralPop" || args[0] === "3") {
             message.member.voiceChannel.join().then(connection => {
-                var dispatcher = connection.playStream(radyo.fenomenfm);
+                var dispatcher = connection.playStream(radyo.kralpop);
                 message.reply("🎧 | **Başarılı! `KralPop` çalınıyor.**").then(m => m.delete(10000)).catch(console.error);
-            })                                                                                    
+            })    
+            } else if (args[0].toLowerCase() === "Virgin Radio" || args[0] === "4") {
+            message.member.voiceChannel.join().then(connection => {
+                var dispatcher = connection.playStream(radyo.vergın);
+                message.reply("🎧 | **Başarılı! `Virgin Radio` çalınıyor.** `Radyo 2 Saniye Sonra Açılıyor`").then(m => m.delete(10000)).catch(console.error);
+            })   
         }
     }
     }
