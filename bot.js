@@ -472,5 +472,6 @@ function play(guild, song) {
 
       .addField("Süre", `${song.durationm}:${song.durations}`, true)
       .setColor("RANDOM")
+      .setImage("https://cdn.discordapp.com/attachments/643854700902613012/678962650985529354/Crafting-Table-icon.jpg")  
   );
 }

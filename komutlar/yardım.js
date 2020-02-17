@@ -17,7 +17,6 @@ exports.run = (client, message, args) => {
 :small_blue_diamond:cr!devam ➠ Müziği devam ettirir.` )  
         .setThumbnail(client.user.avatarURL)
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
-        .setImage("")  
     return message.channel.sendEmbed(embed);
   
   
