@@ -193,7 +193,7 @@ client.on("message", async msg => {
                 "**__1__-__10__ arasında bir sayı belirtmelisin. Belirtmezsen 10 saniye içinde komut iptal edilecektir.**"
               )
               .setFooter("Örnek kullanım: 1")
-              .setColor("0x36393E")
+              .setColor("#ffa700")
           );
           msg.delete(5000);
           try {
@@ -209,7 +209,7 @@ client.on("message", async msg => {
             console.error(err);
             return msg.channel.sendEmbed(
               new Discord.RichEmbed()
-                .setColor("0x36393E")
+                .setColor("#ff0000")
                 .setDescription(
                   "**10 saniye boyunca bir şarkı seçmediğiniz için komut iptal edildi.**."
                 )
@@ -461,7 +461,7 @@ function play(guild, song) {
       .setColor("RANDOM")
       .setColor("RANDOM")
       .setTitle(
-        "**Şarkı Başladı**"
+        "**Şarkı Başladı** **CraftingRoyal Bot**"
       )
       .setThumbnail(
         `https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`
@@ -471,7 +471,7 @@ function play(guild, song) {
       )
 
       .addField("Süre", `${song.durationm}:${song.durations}`, true)
-      .setColor("RANDOM")
-      .setImage("https://cdn.discordapp.com/attachments/643854700902613012/678962650985529354/Crafting-Table-icon.jpg")  
+      .setColor("#05ff00")
+      .setImage("https://haberport.com/images/haberler/2019/12/2020-en-iyi-yasal-ve-ucretsiz-muzik-indirme-siteleri.jpg")  
   );
 }
