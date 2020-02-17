@@ -461,7 +461,8 @@ function play(guild, song) {
       .setColor("RANDOM")
       .setColor("RANDOM")
       .setTitle(
-        "**Şarkı Başladı** **CraftingRoyal Bot**"
+        `**Şarkı Başladı** 
+Pingim: ${client.ping}`
       )
       .setThumbnail(
         `https://i.ytimg.com/vi/${song.id}/default.jpg?width=80&height=60`
@@ -471,7 +472,7 @@ function play(guild, song) {
       )
 
       .addField("Süre", `${song.durationm}:${song.durations}`, true)
-      .setColor("#05ff00")
+      .setColor("#00ccff")
       .setImage("https://haberport.com/images/haberler/2019/12/2020-en-iyi-yasal-ve-ucretsiz-muzik-indirme-siteleri.jpg")  
   );
 }
