@@ -149,7 +149,7 @@ client.on("message", async msg => {
   const serverQueue = queue.get(msg.guild.id);
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(prefix.length);
-  if (msg.content.startsWith("?çal")) {
+  if (msg.content.startsWith("cr!çal")) {
     console.log("mesaj çalışıyor");
     let mesaj2 =
       "**Komutu kullanabilmek için bir ses kanalında bulunmalısınız.**"; // hata neden var onu bulmak için yapıyorum
@@ -473,7 +473,6 @@ Pingim: ${client.ping}`
 
       .addField("Süre", `${song.durationm}:${song.durations}`, true)
       .setColor("#00ccff")
-      .addField("CraftingRoyal Bot https://discordapp.com/oauth2/authorize?client_id=674267885291569157&scope=bot&permissions=2146958847 \n Destek Sunucusu:https://discord.gg/SupP7w6")
-      .setImage("https://haberport.com/images/haberler/2019/12/2020-en-iyi-yasal-ve-ucretsiz-muzik-indirme-siteleri.jpg")  
+      .addField("Youtube EmreHD35 Studio")
   );
 }
