@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     const embed = new Discord.RichEmbed()
         .setAuthor(`${client.user.username} `, client.user.avatarURL)
         .setColor('0x36393E')
-        .setTitle(`${client.user.username} - Youtube EmreHD35 Studio`)
+        .setTitle(`${client.user.username} - HÜSEYİN EMRE ŞEN`)
         .setDescription(`cr!radyo ➠ Radyoyu Açmanızı Sağlar.
 cr!çal ➠ Belirtilen müziği oynatmayı sağlar.
 cr!kapat ➠ Belirtilen müziği kapatmayı sağlar sağlar. 
@@ -17,7 +17,7 @@ cr!duraklat ➠ Müziği durkaklatır.
 cr!devam ➠ Müziği devam ettirir.` )  
         .setThumbnail(client.user.avatarURL)
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
-        .setFooter(`${message.author.username} Youtube EmreHD35 Studio`,message.author.avatarURL)
+        .setFooter(`${message.author.username} * HÜSEYİN EMRE ŞEN`,message.author.avatarURL)
     return message.channel.sendEmbed(embed);
   
   
